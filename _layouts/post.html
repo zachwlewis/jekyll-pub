@@ -7,9 +7,14 @@
 </head>
 <body>
 	<h1>{{ site.title }}</h1>
-	<h2>{{ page.title }}</h2>
-	<div class="byline">by {{ site.author }}</div>
-	<div>{{ content }}</div>
+	
+	<div class="row">
+		<div class="span4">
+			<h2>{{ page.title }}</h2>
+			<span class="byline">by {{ site.author }}</span>
+		</div>
+		<div class="span8">{{ content }}</div>
+	</div>
 
 	<!-- Bootstrap! -->
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
