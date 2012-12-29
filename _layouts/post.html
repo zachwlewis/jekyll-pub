@@ -8,11 +8,15 @@
 	<div class="container">
 		{% include navigation.html %}
 		<div class="row">
-			<div class="span4">
+			<div class="span12">
 				<h2>{{ page.title }}</h2>
-				<p class="text-info"><i class="icon-user"></i> by {{ site.author }}<p class="text-info">
+				<div class="row">
+					<div class="span4">
+						<p class="text-info"><i class="icon-user"></i> by {{ site.author }}<p class="text-info">
+					</div>
+					<div class="span8">{{ content }}</div>
+				</div>
 			</div>
-			<div class="span8">{{ content }}</div>
 		</div>
 	</div>
 	{% include javascript.html %}

@@ -8,8 +8,13 @@
 	<div class="container">
 		{% include navigation.html %}
 		<div class="row">
-			<div class="span4"><h1>{{ page.title }}</h1></div>
-			<div class="span8">{{ content }}</div>
+			<div class="span12">
+				<h1>{{ page.title }}</h1>
+				<div class="row">
+					<div class="span4"><p class="text-info"><i class="icon-file"></i> Posts</p></div>
+					<div class="span8">{{ content }}</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	{% include javascript.html %}
