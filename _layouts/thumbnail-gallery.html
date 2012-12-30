@@ -20,7 +20,7 @@
 								{% for image in page.images %}
 								<li class="span3">
 									<div class="thumbnail">
-										<a href="{{ image.src }}">
+										<a data-toggle="lightbox" href="#image-{{ forloop.index }}">
 											<img src="{{ image.src }}" alt="{{ image.label }}">
 										</a>
 										<h3>{{ image.label }}</h3>
@@ -28,8 +28,17 @@
 									</div>
 								</li>
 								{% endfor %}
-
 							</ul>
+							{% for image in page.images %}
+							<div id="image-{{forloop.index}}" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+								<div class='lightbox-header'>
+									<button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button>
+								</div>
+								<div class='lightbox-content'>
+									<img src="{{image.src}}">
+								</div>
+							</div>
+						{% endfor %}
 						</div>
 						{% endif %}
 					</div>
